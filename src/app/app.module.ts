@@ -4,6 +4,8 @@ import {
   ReactiveFormsModule,
   FormsModule,
 } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CustomMaterialModule } from './materail.module';
 
 
 import { AppComponent } from './app.component';
@@ -16,7 +18,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    CustomMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
