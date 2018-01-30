@@ -1,14 +1,14 @@
 <br>
 <div class="form-container">
-  <form class="example-form">
+  <form class="example-form" [formGroup]="myform">
     <mat-card>
       <h3 class="question-header">Question Set - 1</h3>
 
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Question 1 ?">
+        <input matInput formControlName="question1" placeholder="Question 1 ?">
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Question 2 ?">
+        <input matInput formControlName="question2" placeholder="Question 2 ?">
       </mat-form-field>
     </mat-card>
     <br>
@@ -16,25 +16,28 @@
       <h3 class="question-header">Question Set - 2</h3>
 
       <p>Question 3?</p>
-      <mat-checkbox>Answer 1</mat-checkbox>
-      <mat-checkbox>Answer 2</mat-checkbox>
-      <mat-checkbox>Answer 3</mat-checkbox>
+      <mat-checkbox formControlName="question3">Answer 1</mat-checkbox>
+      <mat-checkbox formControlName="question3">Answer 2</mat-checkbox>
+      <mat-checkbox formControlName="question3">Answer 3</mat-checkbox>
 
       <p>Question 4?</p>
-      <mat-checkbox>Answer 1</mat-checkbox>
-      <mat-checkbox>Answer 2</mat-checkbox>
-      <mat-checkbox>Answer 3</mat-checkbox>
+      <mat-checkbox formControlName="question4" value="answer1" (change)="checkboxValue($event)">Answer 1</mat-checkbox>
+      <mat-checkbox formControlName="question4" value="answer2" (change)="checkboxValue($event)">Answer 2</mat-checkbox>
+      <mat-checkbox formControlName="question4" value="answer3" (change)="checkboxValue($event)">Answer 3</mat-checkbox>
     </mat-card>
     <br>
     <mat-card *ngIf="showSet">
       <h3 class="question-header">Question Set - 3</h3>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Question 1 ?">
+        <input matInput formControlName="question5" placeholder="Question 5 ?">
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Question 2 ?">
+        <input matInput formControlName="question6" placeholder="Question 6 ?">
       </mat-form-field>
     </mat-card>
+    <br>
     <button type="submit" mat-raised-button class="submit-btn" color="primary">Submit</button>
   </form>
 </div>
+<br>
+
