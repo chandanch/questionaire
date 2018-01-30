@@ -1,6 +1,6 @@
 <br>
 <div class="form-container">
-  <form class="example-form" [formGroup]="myform">
+  <form class="example-form" [formGroup]="myform" (ngSubmit)="showFormData()">
     <mat-card>
       <h3 class="question-header">Question Set - 1</h3>
 
@@ -21,9 +21,9 @@
       <mat-checkbox formControlName="question3">Answer 3</mat-checkbox>
 
       <p>Question 4?</p>
-      <mat-checkbox formControlName="question4" value="answer1" (change)="checkboxValue($event)">Answer 1</mat-checkbox>
-      <mat-checkbox formControlName="question4" value="answer2" (change)="checkboxValue($event)">Answer 2</mat-checkbox>
-      <mat-checkbox formControlName="question4" value="answer3" (change)="checkboxValue($event)">Answer 3</mat-checkbox>
+      <mat-checkbox formControlName="question4" value="answer4.1" >Answer 1</mat-checkbox>
+      <mat-checkbox formControlName="question4" value="answer4.2" >Answer 2</mat-checkbox>
+      <mat-checkbox formControlName="question4" value="answer4.3" >Answer 3</mat-checkbox>
     </mat-card>
     <br>
     <mat-card *ngIf="showSet">

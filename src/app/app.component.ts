@@ -22,12 +22,17 @@ export class AppComponent implements OnInit {
       question5: new FormControl(),
       question6: new FormControl(),
     });
+
+    this.myform.controls.question4.valueChanges.subscribe(
+      data => {
+        console.log(data);
+        this.showSet = !this.showSet;
+      }
+    );
   }
 
-  checkboxValue(selectedValue) {
-    console.log(selectedValue.source.value);
-    this.showSet = !this.showSet;
+  showFormData() {
+    console.log(this.myform.value);
   }
-
 
 }
