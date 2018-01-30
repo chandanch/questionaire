@@ -12,6 +12,9 @@ export class AppComponent implements OnInit {
   title = 'app';
   private showSet = false;
   private myform: FormGroup;
+  private question4;
+  private question3;
+  private formData;
 
   ngOnInit() {
     this.myform = new FormGroup({
@@ -32,7 +35,19 @@ export class AppComponent implements OnInit {
   }
 
   showFormData() {
-    console.log(this.myform.value);
+    this.formData = this.myform.value;
+    this.formData.question3 = this.question3;
+    this.formData.question4 = this.question4;
+    console.log(this.formData);
+  }
+
+  onAnswer4(selectedValue) {
+    this.question4 = selectedValue.source.value;
+  }
+
+  onAnswer3(selectedValue) {
+    this.question3 = selectedValue.source.value;
+    console.log(this.question3);
   }
 
 }
