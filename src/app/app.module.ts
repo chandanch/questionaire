@@ -5,10 +5,11 @@ import {
   FormsModule,
 } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { CustomMaterialModule } from './materail.module';
+
 
 
 import { AppComponent } from './app.component';
+import { CustomMaterialModule } from './materail.module';
 
 
 @NgModule({

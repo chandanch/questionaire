@@ -1,0 +1,24 @@
+.form-container {
+    /* background: #d8d8d8 */
+} 
+
+.example-form {
+    /* min-width: 150px;
+    max-width: 500px; */
+    width: 100%;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
+.question-header {
+    color: #6c29d8;
+}
+
+.submit-btn {
+    /* color: #fff;
+    background: #0f9bbe; */
+    width: 30%;
+}
+  

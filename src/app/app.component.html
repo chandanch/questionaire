@@ -1,14 +1,40 @@
-<form>
-  <div class="example-container">
-    <mat-form-field>
-      <input matInput placeholder="Input">
-    </mat-form-field>
-  
-    <mat-form-field>
-      <inpur matInput placeholder="Textarea">
-    </mat-form-field>
-  
-  </div>
-  
-</form>
+<br>
+<div class="form-container">
+  <form class="example-form">
+    <mat-card>
+      <h3 class="question-header">Question Set - 1</h3>
 
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Question 1 ?">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Question 2 ?">
+      </mat-form-field>
+    </mat-card>
+    <br>
+    <mat-card>
+      <h3 class="question-header">Question Set - 2</h3>
+
+      <p>Question 3?</p>
+      <mat-checkbox>Answer 1</mat-checkbox>
+      <mat-checkbox>Answer 2</mat-checkbox>
+      <mat-checkbox>Answer 3</mat-checkbox>
+
+      <p>Question 4?</p>
+      <mat-checkbox>Answer 1</mat-checkbox>
+      <mat-checkbox>Answer 2</mat-checkbox>
+      <mat-checkbox>Answer 3</mat-checkbox>
+    </mat-card>
+    <br>
+    <mat-card *ngIf="showSet">
+      <h3 class="question-header">Question Set - 3</h3>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Question 1 ?">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Question 2 ?">
+      </mat-form-field>
+    </mat-card>
+    <button type="submit" mat-raised-button class="submit-btn" color="primary">Submit</button>
+  </form>
+</div>
